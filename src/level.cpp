@@ -122,12 +122,14 @@ void Level::check_all_collisions()
 
 void Level::check_score()
 {
-    for (auto& pip: pipes) {
-        if (!pip.left_behind) {
-            if (std::abs(pl.posX - (pip.get_pos() + pip.get_width())) < pl.radius) {
-                ++GameState::score;
-                pip.left_behind = true;
-                break;
+    if (!pl.isDead) {
+        for (auto& pip: pipes) {
+            if (!pip.left_behind) {
+                if (std::abs(pl.posX - (pip.get_pos() + pip.get_width())) < pl.radius) {
+                    ++GameState::score;
+                    pip.left_behind = true;
+                    break;
+                }
             }
         }
     }
