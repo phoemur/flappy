@@ -21,6 +21,9 @@ Flappy Bird Clone made with C++14 and SDL2
     make
     cd ..
     ./flappy
+    
+# Run Online
+[Emscripten Build](https://phoemur.github.io/flappy/flappy.html)
 
-
+# Screenshot
 ![](screenshot.png)
